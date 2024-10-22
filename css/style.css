@@ -1,0 +1,385 @@
+/*Comentario de CSS*/
+
+/* Reset de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+/* paleta de colores */
+.color1 {color: #90654a;}
+.color2 {color: #a28e71;}
+.color3 {color: #c4baa1;}
+.color4 {color: #e8e7da;}
+.color5 {color: #f3f3f3;}
+.color6 {color: #ffffff;}
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap');
+/* font-family: "Roboto Mono", monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+/* font-family: "Open Sans", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap');
+/* font-family: "Montserrat", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+/* font-family: "Oswald", sans-serif; */
+
+
+/* HOME */
+
+/*Header*/
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+/* Estilos para el navegador */
+.navegador{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 1000;
+    height: 40px;
+    padding: 0 20px;
+}
+.navbar {
+    display: flex;
+    flex-grow: 1;
+}
+.lista-nav{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.lista-nav li a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    line-height: 60px;
+}
+.logo-text{
+    font-size: 1.2rem;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.iconos {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+    margin-left: auto;
+    align-items: center;
+}
+
+.iconos i {
+    color: white;
+    font-size: 1rem;
+    line-height: 40px;
+}
+/* seccion 1 */
+.principal{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/medios/Imagen\ principal.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.text-over-image{
+    display: block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+    position: absolute;
+    top: 95%;
+    left: 1%;
+    color: white;
+    font-size: 14px;
+    text-decoration: underline;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* seccion 2 - conteiner*/
+.conteiner{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.image-box{
+    background-color: white;
+    margin: 70px 0;
+    padding: 20px 15px;
+}
+.image-box img{
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+.text-center h2, .text-center h3{
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+}
+.text-center h2{
+    font-weight: bold;
+}
+.text-center h3{
+    color: grey;
+    font-size: 0.9rem;
+}
+.text-center{
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* seccion 3 */
+.novedades h2{
+    font-size: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.novedades img{
+    transition: transform 0.3s ease;
+    margin-bottom: 50px;
+}
+.novedades img:hover {
+    transform: scale(1.05);
+}
+.g-0{
+    margin-right: 0;
+    margin-left: 0;
+}
+.col-6, .col-md-3 {
+    padding: 0;
+}
+
+/* footer */
+.newsletter{
+    background-color: #e8e7da;
+    text-align: center;
+    padding: 20px;
+    line-height: 30px;
+}
+.newsletter h3{
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+.newsletter p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    color: rgb(82, 82, 82)
+}
+.newsletter button {
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.newsletter button:hover{
+    background-color: grey;
+}
+.pie-de-pagina {
+    font-family: "Montserrat", sans-serif;
+}
+.pie-de-pagina p{
+    color: rgb(59, 59, 59)
+}
+
+.pie-de-pagina {
+    display: flex; 
+    justify-content: space-between; 
+    background-color: #f4f4f4; 
+    padding: 20px;
+  }
+  .pie-de-pagina div {
+    width: 30%; 
+    text-align: center; 
+  }
+  .pie-de-pagina h4 {
+    margin-bottom:10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .pie-de-pagina p {
+    margin: 3px 0;
+    font-size: 0.8rem;
+  }
+  .redes-sociales a img{
+    width: 30px; 
+    height: auto; 
+    margin: 20px 10px;
+  }
+  .redes-sociales{
+    text-align: center; 
+  }
+
+  /* SHOP */
+
+ .texto-de-archivo h1 {
+    font-size: 1.5rem;
+    margin-top: 60px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 105px;
+ }
+ .texto-de-archivo h2{
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 105px;
+    margin-bottom: 20px;
+ }
+
+ /* grilla */
+.coleccion, .titulo-producto, .precio{
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 0;
+}
+
+.coleccion{
+    font-size: 0.85rem;
+    color: gray;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.titulo-producto{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: 333333;
+    text-align: center;
+}
+.precio{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.text-center img{
+    margin-bottom: 10px;
+    padding: 2px;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.text-center img:hover{
+    transform: scale(1.05);
+    border-color: #ccc;
+}
+.boton-ver-mas{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 30px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+.boton-ver-mas:hover{
+    background-color: #e8e7da;
+}
+/* HOW TO SHOP */
+.contenedor-imagen{
+    text-align: center;
+}
+.imagen-de-instrucciones{
+    max-height: 500px;
+    object-fit: cover; 
+}
+.pasos{
+    margin-left: 0%;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 2;
+    margin-top: 20px;
+    font-family: "Open Sans", sans-serif;
+    padding: 0 105px;
+}
+/* CONTACTO */
+.texto-de-archivo p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    margin: 10px 105px;
+}
+.titulo-formulario{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+}
+.custom-input {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 10px;
+    font-size: 1rem;
+    width: 85%;
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+    margin: 5px 105px;
+}
+.custom-input:focus {
+    border-color: #000;
+    outline: none;
+    background-color: white;
+}
+.custom-input::placeholder {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+button {
+    padding: 10px 30px;
+    border: none;
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #555;
+}
+.mapa{
+    margin-left: 105px;
+    margin-bottom: 20px;
+}
+
+.texto-de-newsletter h1{
+    font-size: 1.5rem;
+    margin-top: 60px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 105px;
+}
