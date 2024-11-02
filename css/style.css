@@ -56,21 +56,46 @@ header{
     display: flex;
     flex-grow: 1;
 }
+.navbar-toggler{
+    border-color: transparent;
+    outline: none;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.flex-column{
+    align-items: flex-start;
+    padding-left: 0px;
+}
 .lista-nav{
     display: flex;
     list-style: none;
-    gap: 20px;
-    align-items: center;
+    gap: 10px;
+    align-items: flex-start;
     margin: 0;
     padding: 0;
 }
+.lista-nav li{
+    list-style: none;
+}
 .lista-nav li a{
-    color: white;
-    text-decoration: none;
-    font-size: 0.8rem;
     text-transform: uppercase;
     font-family: "Open Sans", sans-serif;
     line-height: 60px;
+}
+.flex-column .lista-nav li a{
+    padding: 10px 0;
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+.collapse .navbar-nav{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .logo-text{
     font-size: 1.2rem;
@@ -80,8 +105,14 @@ header{
     line-height: 60px;
     margin: 0;
     position: absolute;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
+}
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: black; /* Aseguramos que el fondo del menú sea negro en móviles */
+    }
 }
 .iconos {
     display: flex;
@@ -103,7 +134,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/medios/Imagen\ principal.png);
+    background-image: url("../medios/Imagen%20principal.png");
     background-size: cover;
     background-position: center;
 }
