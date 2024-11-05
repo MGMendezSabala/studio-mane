@@ -126,7 +126,11 @@ header{
     background-size: cover;
     background-position: center;
 }
-
+@media (max-width: 900px) {
+    .principal {
+        background-image: url("../medios/imagen%20mobile.png"); /* Imagen solo para móviles */
+    }
+}
 .text-over-image{
     display: block;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -135,7 +139,7 @@ header{
 .text {
     position: absolute;
     top: 95%;
-    left: 1%;
+    left: 3%;
     color: white;
     font-size: 14px;
     text-decoration: underline;
@@ -154,6 +158,11 @@ header{
     background-color: white;
     margin: 70px 0;
     padding: 20px 15px;
+}
+@media (max-width: 900px) {
+    .image-box{
+        margin: 30px 0;
+    }
 }
 .image-box img{
     max-width: 300px;
@@ -233,16 +242,23 @@ header{
     font-family: "Montserrat", sans-serif;
     text-align: center;
 }
+@media (max-width: 500px) 
+{
+.pie-de-pagina{
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+    }
+}
   .pie-de-pagina h4 {
-    margin-bottom:10px;
     text-transform: uppercase;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: bolder;
+    margin-top: 0;
   }
   .pie-de-pagina p {
-    margin: 3px 0;
     font-size: 0.9rem;
-    color: rgb(59, 59, 59)
+    color: rgb(59, 59, 59);
+    margin: 7px 0
   }
   .redes-sociales a img{
     width: 30px; 
@@ -261,12 +277,12 @@ header{
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 0 105px;
+    padding: 0 20px;
  }
  .texto-de-archivo h2{
     font-size: 1rem;
     font-family: "Montserrat", sans-serif;
-    padding: 0 105px;
+    padding: 0 20px;
     margin-bottom: 20px;
  }
 
@@ -334,27 +350,38 @@ header{
     line-height: 2;
     margin-top: 20px;
     font-family: "Open Sans", sans-serif;
-    padding: 0 105px;
+    padding: 0 40px;
 }
 /* CONTACTO */
 .texto-de-archivo p{
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
-    margin: 10px 105px;
+    margin: 10px 20px;
 }
 .titulo-formulario{
     font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
 }
 .custom-input {
     border: 1px solid #ccc;
-    border-radius: 0;
-    padding: 10px;
     font-size: 1rem;
-    width: 85%;
+    width: 100%;
     transition: border-color 0.3s ease;
     background-color: #f9f9f9;
-    margin: 5px 105px;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .custom-input {
+        max-width: 500px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        width: 100%;
+        transition: border-color 0.3s ease;
+        background-color: #f9f9f9;
+        margin: 0 auto;
+    }
 }
 .custom-input:focus {
     border-color: #000;
@@ -366,7 +393,7 @@ header{
     font-size: 0.9rem;
 }
 button {
-    padding: 10px 30px;
+    margin-bottom: 1px;
     border: none;
     background-color: #333;
     color: white;
@@ -378,15 +405,90 @@ button:hover {
     background-color: #555;
 }
 .mapa{
-    margin-left: 105px;
-    margin-bottom: 20px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+@media (max-width: 768px) {
+    .mapa{
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+}
+/* NEWSLETTER */
+.texto-de-newsletter h2{
+    font-size: 1rem;
+    margin-top: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+.texto-de-newsletter p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    margin: 10px 20px;
+    color:#333
+}
+.registro {
+    font-family: "Montserrat", sans-serif;
+    margin: 40px auto; /* Centra la sección horizontalmente */
+    padding: 20px;
+    width: 80%; 
+    max-width: 600px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido dentro de la sección */
+    background-color: #a28e71c2; /* Fondo rosa */
+    border-radius: 10px; /* Opcional: bordes redondeados para una mejor apariencia */
 }
 
-.texto-de-newsletter h1{
-    font-size: 1.5rem;
-    margin-top: 60px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
+.formulario-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Asegura que el formulario ocupe el ancho completo del contenedor */
+}
+
+.label-registro {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+select {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 100%; /* Hace que el campo ocupe todo el ancho */
+}
+
+input[type="checkbox"] {
+    width: auto; /* Asegura que el checkbox no ocupe todo el ancho */
+    margin-right: 10px; /* Espacio entre el checkbox y el texto */
+}
+
+.boton-registro {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
     text-transform: uppercase;
-    padding: 0 105px;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Centra el botón */
+    width: fit-content;
+}
+
+.boton-registro:hover {
+    background-color: #555;
+}
+
+.aceptar-promociones {
+    display: flex;
+    align-items: center; /* Alinea el checkbox y el texto en la misma línea */
+    gap: 5px; /* Espacio entre el checkbox y el texto */
 }

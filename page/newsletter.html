@@ -13,7 +13,7 @@
 <body>
     <header>
         <section class="navegador fixed-top">
-            <nav class="navbar navbar-expand-md" data-bs-theme="dark">
+            <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -45,27 +45,22 @@
         </div>
         
         <section class="texto-de-newsletter">
-           
                 <h2>10% de descuento en tu primera compra</h2>
                 <p>Al suscribirte a nuestro boletín, recibirás un código de descuento para usar en tu próxima compra.</p>
-         
-
        
                 <h2>Ofertas exclusivas</h2>
                 <p>Accede a ofertas solo disponibles para nuestros suscriptores.</p>
-          
-         
+        
                 <h2>Novedades semanales</h2>
                 <p>Recibe información de nuestros nuevos lanzamientos antes que el público en general.</p>
-          
         </section>
-        <section>
+        <section class="registro">
             <h2>Regístrate ahora</h2>
-            <form action="">
-                <label for="email">Correo electrónico</label>
+            <form action="" class="formulario-registro">
+                <label class="label-registro" for="email">Correo electrónico</label>
                 <input type="email" placeholder="Ingresa tu correo electrónico">
                 
-                <label for="genero">Selecciona tu género:</label>
+                <label class="label-registro" for="genero">Selecciona tu género:</label>
                 <select name="genero" required>
                     <option value="mujer">Mujer</option>
                     <option value="hombre">Hombre</option>
@@ -78,32 +73,31 @@
                     </label>
                 </div>
 
-                <button type="submit">Si, me quiero suscribir!</button>
+                <button class="boton-registro" type="submit">Si, me quiero suscribir!</button>
             </form>
         </section>
     </main>
     <footer>
-        <section class="pie-de-pagina"> 
-            <div class="footer-contacto">
+        <section class="container pie-de-pagina"> 
+            <div class="row">
+            <div class="col-12 col-md-4">
                 <h4>Contacto</h4>
                 <p>studiomane@gmail.com</p>
                 <p>+54 (11) 2222 3333</p>
                 <p>CABA, Argentina</p>
             </div>
-
-            <div class="nosotros">
+            <div class="col-12 col-md-4">
                 <h4>Nosotros</h4>
                 <p>Términos y condiciones</p>
                 <p>Políticas de privacidad</p>
             </div>
-
-            <div class="ayuda">
+            <div class="col-12 col-md-4">
                 <h4>Ayuda</h4>
                 <p>Preguntas frecuentes</p>
                 <p>Cambios y devoluciones</p>
                 <p>Botón de arrepentimiento</p>
             </div>
-
+            </div>
         </section>
 
         <section class="redes-sociales">
