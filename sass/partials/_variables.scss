@@ -10,3 +10,5 @@ $container-max-width: 1200px;
 $background-color-newsletter: #e8e7da;
 $dark-gray: rgb(82, 82, 82);
 $light-gray: rgb(59, 59, 59);
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+    transition: $property $duration $timing;
